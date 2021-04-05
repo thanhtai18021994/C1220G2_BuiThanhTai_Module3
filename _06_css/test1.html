@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css1.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="myimage">
+            <img src="./access/image/1.jpg" alt="" class="img">
+        </div>
+        <div class="myimage">
+            <img src="./access/image/2.jpg" alt="" class="img">
+        </div>
+        <div class="myimage">
+            <img src="./access/image/3.jpg" alt="" class="img">
+        </div>
+        <div class="myimage">
+            <img src="./access/image/4.jpg" alt="" class="img">
+        </div>
+    </div>
+    <button onclick="myfunction()">click</button>
+    <script>
+        let control = document.getElementsByClassName("myimage");
+        let index = 0;
+
+        function myfunction() {
+            for (let i = 0; i < control.length; i++) {
+                control[i].style.display = "none";
+            }
+            control[index].style.display = "block";
+            index++;
+            if (index > control.length - 1) {
+                index = 0;
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./access/css/css.css">
+    <title>Document</title>
+</head>
+
+<body onscroll="myfunction()">
+    <div id="main">
+        <div id="navbar_menu">
+            <div class="navbar_menu-logo">
+                <img class="navbar_image" src="./access/image/img_logo.png" alt="">
+            </div>
+            <div class="navbar_menu-search navbar_main">
+                <input class="navbar_menu-input" type="text">
+            </div>
+            <div class="navbar_menu-acount navbar_main">
+                <div class="acount_iterm navbar_main">Đăng ký/Đăng Nhập</div>
+            </div>
+        </div>
+        <div id="navbar_list">
+            <div class="navbar_list-main">
+                <ul class="navbar_list-iterm">
+                    <li class="navbar_iterm"><a href="">TRANG CHỦ</a></li>
+                    <li class="navbar_iterm"><a href="">THỂ LOẠI </a></li>
+                    <li class="navbar_iterm"><a href="">TRUYỆN TRANH</a></li>
+                    <li class="navbar_iterm"><a href="">CHỦ ĐỀ</a></li>
+                    <li class="navbar_iterm"><a href="">TIỆN ÍCH</a></li>
+                    <li class="navbar_iterm"><a href="">DIỄN ĐÀN</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="container">
+        <div class="content">
+            <p>Trang chủ</p>
+            <h3>TRUYỆN ĐỀ CỬ</h3>
+            <div class="content_slidebar">
+                <div class="myslide">
+                    <img src="./access/image/1.jpg" alt="" style="width:100%">
+                    <div class="content_slide"></div>
+                </div>
+            </div>
+            <div class="content_slidebar">
+                <div class="myslide">
+                    <img src="./access/image/2.jpg" alt="" style="width:100%">
+                    <div class="content_slide"></div>
+                </div>
+            </div>
+            <div class="content_slidebar">
+                <div class="myslide">
+                    <img src="./access/image/3.jpg" alt="" style="width:100%">
+                    <div class="content_slide"></div>
+                </div>
+            </div>
+            <div class="content_slidebar">
+                <div class="myslide">
+                    <img src="./access/image/4.jpg" alt="" style="width:100%">
+                    <div class="content_slide"></div>
+                </div>
+            </div>
+            <div class="content_slidebar">
+                <div class="myslide">
+                    <img src="./access/image/5.jpg" alt="" style="width:100%">
+                    <div class="content_slide"></div>
+                </div>
+            </div>
+            <div class="content_slidebar">
+                <div class="myslide">
+                    <img src="./access/image/6.jpg" alt="" style="width:100%">
+                    <div class="content_slide"></div>
+                </div>
+            </div>
+            <div class="content_slidebar">
+                <div class="myslide">
+                    <img src="./access/image/7.jpg" alt="" style="width:100%">
+                    <div class="content_slide"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let navbar = document.getElementById("navbar_list");
+        document.get
+        let sticky = navbar.offsetTop;
+
+        function myfuntion() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky");
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+</body>
+
+</html>

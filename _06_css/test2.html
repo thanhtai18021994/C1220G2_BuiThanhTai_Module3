@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css2.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="mySlider"></div>
+    <div id="sliderNav">
+        <div id="sliderPrev" onclick="prevSlide()"><img src="https://nguyenvanhieu.vn/wp-content/uploads/2020/09/left-arrow.png"></div>
+        <div id="sliderNext" onclick="nextSlide()"><img src="https://nguyenvanhieu.vn/wp-content/uploads/2020/09/right-arrow.png"></div>
+    </div>
+    <script>
+        let i;
+        let slideindex = 0;
+        let currentslideinsert = 0;
+        let slideArray = [];
+
+        function slideShow(title, subtile, background, link) {
+            this.title = title;
+            this.subtile = subtile;
+            this.background = background;
+            this.link = link;
+            this.id = "slide" + slideindex;
+            slideindex++;
+            slideArray.push(this);
+        }
+        let smile = new slideShow(
+            "Tôi đã chuyển Sinh Thành smile",
+            "A show about fighting zombies",
+            "./access/image/1.jpg",
+            "http://www.nettruyen.com/truyen-tranh/toi-da-chuyen-sinh-thanh-slime-10062"
+        );
+        let novel2 = new slideShow(
+            "Đế vương tại thượng",
+            "A show about fighting people",
+            "./access/image/2.jpg",
+            "http://www.nettruyen.com/truyen-tranh/tong-tai-tai-thuong-14549"
+        );
+        let novel3 = new slideShow(
+            "Chí Tôn đồng thuật sư",
+            "emotion school",
+            "./access/image/3.jpg",
+            "http://www.nettruyen.com/truyen-tranh/chi-ton-dong-thuat-su-tuyet-the-dai-tieu-thu-26140"
+        );
+        let novel4 = new slideShow(
+            "Toàn Chưc pháp su",
+            "advance film",
+            "./access/image/3.jpg",
+            "http://www.nettruyen.com/truyen-tranh/toan-chuc-phap-su-17023"
+        );
+        let newElement;
+
+
+        function buildSlide() {
+            newElement += "<div id='" +
+                slideArray[i].id +
+                "' class='singleSlide' style='background-image:url(" +
+                slideArray[i].background +
+                ");'>" +
+                "<div class='slideOverlay'>" +
+                "<h1>" +
+                slideArray[i].title +
+                "</h1>" +
+                "<h4>" +
+                slideArray[i].subtitle +
+                "</h4>" +
+                "<a href='" +
+                slideArray[i].link +
+                "' target='_blank'>Open Link</a>" +
+                "</div>" +
+                "</div>";
+        }
+        buildSlide();
+
+        function prevSlide() {
+            let nextSlideIndex;
+            if (currentslideinsert === 0) {
+                nextSlideIndex = slideArray.length - 1;
+            } else {
+                nextSlideIndex = currentslideinsert - 1;
+            }
+            document.getElementById("slide" + nextSlideIndex).style.left = "-100%";
+            document.getElementById("slide" + currentSlideIndex).style.left = 0;
+            document
+                .getElementById("slide" + nextSlideIndex)
+                .setAttribute("class", "singleSlide slideInLeft");
+            document
+                .getElementById("slide" + currentSlideIndex)
+                .setAttribute("class", "singleSlide slideOutRight");
+            currentSlideIndex = nextSlideIndex;
+        }
+    </script>
+</body>
+
+</html>

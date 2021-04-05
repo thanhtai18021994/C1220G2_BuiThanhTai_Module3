@@ -1,0 +1,37 @@
+p {
+    font-style: italic;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+    opacity: 0.5;
+}
+
+body {
+    height: 1000px;
+}
+
+.class1 {
+    /* display: block; */
+    width: 1000px;
+    height: 100px;
+    background-color: aqua;
+    position: sticky;
+    top: 0;
+}
+
+.sub_class1 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: blueviolet;
+    top: 0;
+}
+
+.sub_class2 {}
+
+.class2 {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}

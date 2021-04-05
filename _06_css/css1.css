@@ -1,0 +1,11 @@
+img {
+    width: 100px;
+    height: 100px;
+}
+
+.myimage {
+    display: none;
+    display: block;
+    width: 100px;
+    height: 100px;
+}
