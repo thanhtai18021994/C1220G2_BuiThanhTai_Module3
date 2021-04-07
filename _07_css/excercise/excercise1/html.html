@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="slide_one"></div>
+        <div class="slide_two"></div>
+        <div class="slide_three"></div>
+
+    </div>
+    <div class="prearrow" onclick="preSlide()"></div>
+    <div class="nextArrow" onclick="nextSlide()"></div>
+    <script>
+        let slideArray = [];
+        let currentIndex = 0;
+        let slideIndex = 0;
+
+        function slides(title, background) {
+            this.title = title;
+            this.background = background;
+            this.id = "slide" + slideIndex;
+            slideIndex++;
+            slideArray.push(slides);
+        }
+        let slide1 = new slides(
+            "Title 1",
+            "excercise\excercise1\anh truyen\1.jpg"
+        );
+        let slide2 = new slides(
+            "Title 1",
+            "excercise\excercise1\anh truyen\2.jpg"
+        );
+        let slide3 = new slides(
+            "Title 1",
+            "excercise\excercise1\anh truyen\3.jpg"
+        );
+        let slide4 = new slides(
+            "Title 1",
+            "excercise\excercise1\anh truyen\4.jpg"
+        );
+
+        function buildSlide() {
+            let myslide;
+            for (let i = 0; i < slideArray.length; i++) {
+                myslide += "<div id='" + slideArray[i].id + "' style='background-image: url('" + slideArray[i].background + "');'>" + "<div class='my_title'>" + slideArray[i].title + "</div>" + "</div>";
+            }
+            document.getElementById("slide_one").innerHTML = myslide;
+            document.getElementById("slide" + currentIndex).style.left = 0;
+        }
+        buildSlide();
+    </script>
+</body>
+
+</html>

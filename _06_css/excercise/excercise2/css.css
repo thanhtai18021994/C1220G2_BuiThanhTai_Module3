@@ -1,0 +1,17 @@
+.decoration {
+    border-bottom: brown dotted 4px;
+    width: 80%;
+    margin: 0 64px 24px 24px;
+}
+
+.text_color {
+    color: cornflowerblue;
+}
+
+.text_identation {
+    text-indent: 50px;
+}
+
+h2 {
+    text-align: left;
+}

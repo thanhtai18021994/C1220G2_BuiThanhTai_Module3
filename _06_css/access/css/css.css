@@ -1,7 +1,4 @@
-    body {
-        height: 1000px;
-        /* width: 100%; */
-    }
+    /* body {} */
     
     #navbar_menu {
         width: 80%;
@@ -86,16 +83,145 @@
     #container {
         background-color: #ccc;
         width: 100%;
-        height: 500px;
+        height: 600px;
     }
     
     .content {
         background-color: white;
         width: 64%;
-        height: 500px;
+        height: 600px;
         margin: auto;
+        display: flex;
     }
     
-    .content_slidebar {
-        display: none;
+    .content_one {
+        width: 70%;
+    }
+    
+    .content_two {
+        width: 30%;
+    }
+    
+    .content_saparate {
+        border-left: 1px solid #ccc;
+    }
+    
+    .comic_iterm {
+        border-bottom: 1px solid #ccc;
+        height: 64px;
+        display: flex;
+        padding: 8px;
+        margin: 8px
+    }
+    
+    .image_comic {
+        width: 56px;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .content_comic {
+        display: inline-block;
+        width: 210px;
+    }
+    
+    .content_comic a {
+        display: inline-block;
+        text-decoration: none;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 92%;
+        height: 20px;
+        border: hidden;
+        font-size: 14px;
+        padding: 0 4px;
+        margin: 4px;
+        color: black;
+        width: 100%;
+    }
+    
+    .chapter {
+        font-size: 14px;
+        margin: 4px;
+        padding: 0 4px;
+        display: inline-block;
+    }
+    
+    .views {
+        display: inline-block;
+        font-size: 14px;
+        opacity: 0.6;
+        font-style: italic;
+    }
+    
+    .discribe {
+        margin: 4px;
+    }
+    
+    a:hover {
+        color: cornflowerblue;
+    }
+    
+    .fade {
+        border: none;
+    }
+    
+    .list_comic-hot {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .comic_iterm-hot {
+        flex: 1;
+        margin: 12px;
+    }
+    
+    .my_image {
+        position: relative;
+    }
+    
+    .my_image-dicribe {
+        width: 120px;
+    }
+    
+    .image_self {
+        width: 120px;
+        height: 162px;
+    }
+    
+    .my_image-dicribe {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        bottom: 0;
+        opacity: 0.6;
+        background-color: #ffff;
+    }
+    
+    .my_image-view {
+        flex: 1;
+    }
+    
+    .my_image-comment {
+        flex: 1;
+    }
+    
+    .chapter-new {
+        font-style: italic;
+        font-size: 14px;
+        color: darkolivegreen;
+    }
+    
+    .my_comic {
+        margin: 12px 8px;
+        color: rgba(46, 138, 138, 0.7);
+    }
+    
+    .footer {
+        background-image: url("D:\Web\Modul3\_06_css\access\image\55ba9aa5a2d0586cbccd8ac238f4d1b1.jpg");
+        height: 120px;
+        width: 100%;
     }
