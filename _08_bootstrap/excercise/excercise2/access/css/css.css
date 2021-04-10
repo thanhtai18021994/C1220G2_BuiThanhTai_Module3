@@ -1,0 +1,18 @@
+* {
+    color: #262626;
+}
+
+.nav-item:hover {
+    text-decoration: underline;
+}
+
+.border_right {
+    border-right: 2px solid black;
+    margin: 4px 0;
+}
+
+.width_image {
+    width: 100px;
+}
+
+.dropdown_menu-control {}

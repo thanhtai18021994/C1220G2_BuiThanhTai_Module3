@@ -1,0 +1,18 @@
+.control {
+    box-sizing: border-box;
+    display: block;
+    background-color: white;
+    background-image: url("test\6b5d9a7a3cb44e5f7e0c6dfe442e9dff.jpg");
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+}
+
+.background-position {
+    background-color: teal;
+    height: 500px;
+    width: 500px;
+    background-repeat: no-repeat;
+    background-image: url('./698956-icon-111-search-512.webp');
+    background-position: 20px 50px;
+}
